@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [POM]">
+  <parameter name="pwd" value="crmsfa"/>
+  <parameter name="url" value="http://leaftaps.com/opentaps"/>
+  <parameter name="username" value="DemoSalesManager"/>
+  <test thread-count="5" name="CreateLead">
+    <classes>
+      <class name="testcases.pom.TC001_CreateLead_POM"/>
+    </classes>
+  </test> <!-- CreateLead -->
+</suite> <!-- Failed suite [POM] -->

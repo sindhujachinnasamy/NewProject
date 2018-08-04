@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LeafTaps">
+<parameter name="url" value="http://leaftaps.com/opentaps"></parameter>
+<parameter name="username" value="DemoSalesManager"></parameter>
+<parameter name="pwd" value="crmsfa"></parameter>
+  <test thread-count="2" name="Leads">
+    <classes>
+      <class name="wdmethods.testcase.CreateLeadSeImplemented"/>
+      <class name="wdmethods.testcase.MergeLeadSeImplemented"/>
+      <class name="wdmethods.testcase.DuplicateLeadSeImplemented"/>
+      <class name="wdmethods.testcase.DeleteLeadSeImplemented"/>
+      <class name="wdmethods.testcase.EditLeadSeImplemented"/>
+    </classes>
+  </test> <!-- Leads -->
+</suite> <!-- LeafTaps -->

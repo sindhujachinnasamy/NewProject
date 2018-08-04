@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LeafTaps" verbose="5">
+<parameter name="url" value="http://leaftaps.com/opentaps"></parameter>
+<parameter name="username" value="DemoSalesManager"></parameter>
+<parameter name="pwd" value="crmsfa"></parameter>
+  <test thread-count="5" name="CreateLeadTest">
+    <classes>
+      <!-- <class name="wdmethods.testcase.CreateLeadSeImplemented"/> -->
+      <class name="wdmethods.testcase.EditLeadSeImplemented"/>
+    </classes>
+  </test> <!-- CreateLeadTest -->
+</suite> <!-- LeafTaps -->

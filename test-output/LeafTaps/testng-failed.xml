@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [LeafTaps]">
+  <parameter name="pwd" value="crmsfa"/>
+  <parameter name="url" value="http://leaftaps.com/opentaps"/>
+  <parameter name="username" value="DemoSalesManager"/>
+  <test thread-count="5" name="CreateLeadTest">
+    <classes>
+      <class name="wdmethods.testcase.EditLeadSeImplemented"/>
+    </classes>
+  </test> <!-- CreateLeadTest -->
+  <test name="CreateLeadTest(failed)">
+    <classes>
+      <class name="wdmethods.testcase.EditLeadSeImplemented">
+        <methods>
+          <include name="editLead"/>
+          <include name="startReport"/>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- wdmethods.testcase.EditLeadSeImplemented -->
+    </classes>
+  </test> <!-- CreateLeadTest(failed) -->
+</suite> <!-- Failed suite [LeafTaps] -->
