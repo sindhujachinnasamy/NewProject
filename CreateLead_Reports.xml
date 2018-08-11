@@ -6,8 +6,8 @@
 <parameter name="pwd" value="crmsfa"></parameter>
   <test thread-count="5" name="CreateLead_Reports">
     <classes>
-      <!-- <class name="week6.classroom.CreateLeadWithReports"/> -->
-      <class name="week6.classroom.EditLeadWithReports"/>
+      <class name="week6.classroom.CreateLeadWithReports"/> 
+      <!-- <class name="week6.classroom.EditLeadWithReports"/> -->
     </classes>
   </test> <!-- CreateLead_Reports -->
 </suite> <!-- Reports -->

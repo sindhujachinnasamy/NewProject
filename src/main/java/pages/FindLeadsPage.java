@@ -21,11 +21,20 @@ public class FindLeadsPage extends Annotations {
 	@FindBy ( name= "emailAddress")
 	WebElement eleEmailAddress;
 	
+	@FindBy ( xpath= "(//span[@class='x-tab-strip-text '])[2]")
+	WebElement elePhone;
+	
+	@FindBy ( name= "phoneNumber")
+	WebElement elePhoneNumber;
+	
+	@FindBy ( xpath= "(//input[@name='firstName'])[3]")
+	WebElement eleEnterFirstName;
+	
 	@FindBy ( xpath= "//button[text()='Find Leads']")
 	WebElement eleFindLeads;
 	
 	@FindBy ( xpath= "//div[@class='x-grid3-cell-inner x-grid3-col-firstName']/a")
-	WebElement eleFirstName;
+	WebElement eleGetFirstName;
 	
 	@FindBy ( xpath= "(//div[@class='x-grid3-cell-inner x-grid3-col-partyId'])[1]/a")
 	WebElement eleFirstResultingLead;
@@ -33,6 +42,12 @@ public class FindLeadsPage extends Annotations {
 	public FindLeadsPage clickEmailTab()
 	{
 		click(eleEmail);
+		return this;
+	}
+	
+	public FindLeadsPage clickPhoneTab()
+	{
+		click(elePhone);
 		return this;
 	}
 	
@@ -48,6 +63,18 @@ public class FindLeadsPage extends Annotations {
 		return this;
 	}
 	
+	public FindLeadsPage typePhoneNumber(String ph)
+	{
+		type(elePhoneNumber, ph);
+		return this;
+	}
+	
+	public FindLeadsPage typeFirstName(String fName)
+	{
+		type(eleEnterFirstName, fName);
+		return this;
+	}
+	
 	public FindLeadsPage clickFindLeads()
 	{
 		click(eleFindLeads);
@@ -56,7 +83,7 @@ public class FindLeadsPage extends Annotations {
 	
 	public FindLeadsPage getFirstName()
 	{
-		getText(eleFirstName);
+		getText(eleGetFirstName);
 		return this;
 	}
 	
@@ -66,3 +93,12 @@ public class FindLeadsPage extends Annotations {
 		return new ViewLeadPage();
 	}
 }
+
+/*driver.findElementByXPath("(//span[@class='x-tab-strip-text '])[2]").click();
+driver.findElementByName("phoneNumber").sendKeys("1234");
+
+driver.findElementByXPath("//button[text()='Find Leads']").click();
+Thread.sleep(3000);
+
+String leadId = driver.findElementByXPath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a").getText();
+driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId'])[1]/a").click();*/

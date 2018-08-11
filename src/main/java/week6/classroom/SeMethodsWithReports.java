@@ -104,8 +104,13 @@ public class SeMethodsWithReports extends Repor implements WdMethods{
 	}
 	
 	public void clickNoSnap(WebElement ele) {
-		ele.click();
-		System.out.println("The Element "+ele+" is clicked Successfully");
+		try {
+			ele.click();
+			reportStep("The Element "+ele+" is clicked Successfully","pass");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			reportStep("The Element "+ele+" is NOT clicked","fail");
+		}
 		
 	}
 
@@ -122,10 +127,12 @@ public class SeMethodsWithReports extends Repor implements WdMethods{
 		try {
 			Select dropDown = new Select(ele);
 			dropDown.selectByVisibleText(value);
-			System.out.println(value+ " is selected Successfully");
+			reportStep("The Element "+ele+" is selected Successfully","pass");
 		} catch (NoSuchElementException e) {
+			reportStep("The Element "+ele+" is NOT seleted","fail");
 			System.out.println("Element Not found exception");
 		}catch (WebDriverException e) {
+			reportStep("The Element "+ele+" is NOT seleted","fail");
 			System.out.println("Browser level Exception");
 		}finally {
 		takeSnap();
@@ -134,10 +141,15 @@ public class SeMethodsWithReports extends Repor implements WdMethods{
 
 	@Override
 	public void selectDropDownUsingIndex(WebElement ele, int index) {
-		Select dropDown = new Select(ele);
-		dropDown.selectByIndex(index);
-		System.out.println(dropDown.getFirstSelectedOption().getText()+ " is selected Successfully");
-		takeSnap();
+		try {
+			Select dropDown = new Select(ele);
+			dropDown.selectByIndex(index);
+			reportStep("The Element "+ele+" is seleted Successfully","pass");
+			takeSnap();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			reportStep("The Element "+ele+" is NOT seleted","fail");
+		}
 	}
 
 	@Override
@@ -148,11 +160,11 @@ public class SeMethodsWithReports extends Repor implements WdMethods{
 		
 		// TODO Auto-generated method stub
 		if ( driver.getTitle().equals(expectedTitle)) {
-			System.out.println("Title of the Page is Verified");
+			reportStep(expectedTitle+" is Verified","pass");
 		bReturn = true;
 		}
 		else {
-			System.out.println("Title of the Page is NOT Verified");
+			reportStep(expectedTitle+" is NOT Verified","fail");
 		}
 		return bReturn;
 	}
@@ -160,18 +172,17 @@ public class SeMethodsWithReports extends Repor implements WdMethods{
 	@Override
 	public void verifyExactText(WebElement ele, String expectedText) {
 		if (ele.getText().equals(expectedText))
-			System.out.println("Exact Match is Verified");
+			reportStep("Exact Match of the Text - "+expectedText+" is Verified","pass");
 		else
-			System.out.println("Exact Match is NOT Verified");
+			reportStep("Exact Match of the Text - "+expectedText+" is NOT Verified","fail");
 	}
 
 	@Override
 	public void verifyPartialText(WebElement ele, String expectedText) {
 		if (ele.getText().contains(expectedText))
-			System.out.println("Partial Match is Verified");
+			reportStep("Partial Match of the Text -"+expectedText+" is Verified","pass");
 		else
-			System.out.println("Partial Match is NOT Verified");
-		
+			reportStep("Partial Match of the Text -"+expectedText+" is NOT Verified","fail");
 	}
 
 	@Override
@@ -179,10 +190,9 @@ public class SeMethodsWithReports extends Repor implements WdMethods{
 		
 		String textValue = ele.getAttribute(attribute);
 		if (ele.getAttribute(attribute).equals(expectedText))
-			System.out.println("Exact Match is Verified");
+			reportStep("Exact Match of the Value -"+ele.getAttribute(attribute).equals(expectedText)+" is Verified","pass");
 		else
-			System.out.println("Exact Match is NOT Verified");
-		
+			reportStep("Exact Match of the Value -"+ele.getAttribute(attribute).equals(expectedText)+" is NOT Verified","fail");
 	}
 
 	@Override
@@ -190,30 +200,28 @@ public class SeMethodsWithReports extends Repor implements WdMethods{
 		// TODO Auto-generated method stub
 		String textValue = ele.getAttribute(attribute);
 		if (ele.getAttribute(attribute).contains(value))
-			System.out.println("Exact Match is Verified");
+			reportStep("Partial Match of the Value -"+ele.getAttribute(attribute).contains(value)+" is Verified","pass");
 		else
-			System.out.println("Exact Match is NOT Verified");
-		
+			reportStep("Partial Match of the Value -"+ele.getAttribute(attribute).contains(value)+" is NOT Verified","fail");
+
 	}
 
 	@Override
 	public void verifySelected(WebElement ele) {
 		if (ele.isSelected())
-		{
-			System.out.println(ele+" is Selected");
-		}
+			reportStep(ele+ " is Selected","pass");
 		else
-			System.out.println(ele+" is NOT Selected");
+			reportStep(ele+ " is NOT Selected","fail");
+
 	}
 
 	@Override
 	public void verifyDisplayed(WebElement ele) {
 		if (ele.isDisplayed())
-		{
-			System.out.println(ele+" is Displayed");
-		}
-		else
-			System.out.println(ele+" is NOT Displayed");
+		
+			reportStep(ele+ " is Displayed","pass");
+			else
+				reportStep(ele+ " is NOT Displayed","fail");
 		
 	}
 

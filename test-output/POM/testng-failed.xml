@@ -9,4 +9,18 @@
       <class name="testcases.pom.TC001_CreateLead_POM"/>
     </classes>
   </test> <!-- CreateLead -->
+  <test name="CreateLead(failed)">
+    <classes>
+      <class name="testcases.pom.TC001_CreateLead_POM">
+        <methods>
+          <include name="browserClose"/>
+          <include name="createLead"/>
+          <include name="startReport"/>
+          <include name="openApp"/>
+          <include name="setValues"/>
+          <include name="beginTest"/>
+        </methods>
+      </class> <!-- testcases.pom.TC001_CreateLead_POM -->
+    </classes>
+  </test> <!-- CreateLead(failed) -->
 </suite> <!-- Failed suite [POM] -->

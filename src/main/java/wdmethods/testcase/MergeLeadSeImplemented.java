@@ -59,5 +59,10 @@ public class MergeLeadSeImplemented extends Annotations {
 		WebElement findLeadButton = locateElement("xpath","//button[text()='Find Leads']");
 		click(findLeadButton);
 		
+		if ( driver.findElementByXPath("//div[text()='No records to display']").getText().equals("No records to display"))
+			System.out.println("Error message is verified");
+		else
+			System.out.println("Error message is NOT verified");
+		
 	}
 }

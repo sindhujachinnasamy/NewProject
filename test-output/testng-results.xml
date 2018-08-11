@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="POM" duration-ms="55651" started-at="2018-08-04T05:09:25Z" finished-at="2018-08-04T05:10:20Z">
+  <suite name="Reports" duration-ms="42588" started-at="2018-08-11T11:50:34Z" finished-at="2018-08-11T11:51:16Z">
     <groups>
     </groups>
-    <test name="CreateLead" duration-ms="55651" started-at="2018-08-04T05:09:25Z" finished-at="2018-08-04T05:10:20Z">
-      <class name="testcases.pom.TC001_CreateLead_POM">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="startReport" is-config="true" duration-ms="1312" started-at="2018-08-04T10:39:23Z" finished-at="2018-08-04T10:39:25Z">
+    <test name="CreateLead_Reports" duration-ms="42588" started-at="2018-08-11T11:50:34Z" finished-at="2018-08-11T11:51:16Z">
+      <class name="week6.classroom.CreateLeadWithReports">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="startReport" is-config="true" duration-ms="1044" started-at="2018-08-11T17:20:33Z" finished-at="2018-08-11T17:20:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setValues()[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="setValues" is-config="true" duration-ms="0" started-at="2018-08-04T10:39:25Z" finished-at="2018-08-04T10:39:25Z">
+        <test-method status="PASS" signature="setValues()[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="setValues" is-config="true" duration-ms="0" started-at="2018-08-11T17:20:34Z" finished-at="2018-08-11T17:20:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method status="PASS" signature="beginTest()[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="beginTest" is-config="true" duration-ms="0" started-at="2018-08-04T10:39:25Z" finished-at="2018-08-04T10:39:25Z">
+        <test-method status="PASS" signature="beginTest()[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="beginTest" is-config="true" duration-ms="0" started-at="2018-08-11T17:20:34Z" finished-at="2018-08-11T17:20:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beginTest -->
-        <test-method status="PASS" signature="openApp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="openApp" is-config="true" duration-ms="16584" started-at="2018-08-04T10:39:27Z" finished-at="2018-08-04T10:39:44Z">
+        <test-method status="PASS" signature="openApp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="openApp" is-config="true" duration-ms="14988" started-at="2018-08-11T17:20:36Z" finished-at="2018-08-11T17:20:51Z">
           <params>
             <param index="0">
               <value>
@@ -40,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="createLead" duration-ms="11414" started-at="2018-08-04T10:39:44Z" data-provider="fetchData" finished-at="2018-08-04T10:39:55Z">
+        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="createLead" duration-ms="5989" started-at="2018-08-11T17:20:51Z" data-provider="fetchData" finished-at="2018-08-11T17:20:57Z">
           <params>
             <param index="0">
               <value>
@@ -71,11 +71,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createLead -->
-        <test-method status="PASS" signature="browserClose()[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="browserClose" is-config="true" duration-ms="251" started-at="2018-08-04T10:39:55Z" finished-at="2018-08-04T10:39:55Z">
+        <test-method status="PASS" signature="browserClose()[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="browserClose" is-config="true" duration-ms="2161" started-at="2018-08-11T17:20:57Z" finished-at="2018-08-11T17:20:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClose -->
-        <test-method status="PASS" signature="openApp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="openApp" is-config="true" duration-ms="13586" started-at="2018-08-04T10:39:55Z" finished-at="2018-08-04T10:40:09Z">
+        <test-method status="PASS" signature="openApp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="openApp" is-config="true" duration-ms="9280" started-at="2018-08-11T17:20:59Z" finished-at="2018-08-11T17:21:08Z">
           <params>
             <param index="0">
               <value>
@@ -96,7 +96,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="createLead" duration-ms="9242" started-at="2018-08-04T10:40:09Z" data-provider="fetchData" finished-at="2018-08-04T10:40:18Z">
+        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="createLead" duration-ms="6261" started-at="2018-08-11T17:21:08Z" data-provider="fetchData" finished-at="2018-08-11T17:21:14Z">
           <params>
             <param index="0">
               <value>
@@ -127,15 +127,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createLead -->
-        <test-method status="PASS" signature="browserClose()[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="browserClose" is-config="true" duration-ms="2124" started-at="2018-08-04T10:40:18Z" finished-at="2018-08-04T10:40:20Z">
+        <test-method status="PASS" signature="browserClose()[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="browserClose" is-config="true" duration-ms="2142" started-at="2018-08-11T17:21:14Z" finished-at="2018-08-11T17:21:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClose -->
-        <test-method status="PASS" signature="closeReport()[pri:0, instance:testcases.pom.TC001_CreateLead_POM@192b07fd]" name="closeReport" is-config="true" duration-ms="641" started-at="2018-08-04T10:40:20Z" finished-at="2018-08-04T10:40:21Z">
+        <test-method status="PASS" signature="closeReport()[pri:0, instance:week6.classroom.CreateLeadWithReports@148080bb]" name="closeReport" is-config="true" duration-ms="584" started-at="2018-08-11T17:21:17Z" finished-at="2018-08-11T17:21:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeReport -->
-      </class> <!-- testcases.pom.TC001_CreateLead_POM -->
-    </test> <!-- CreateLead -->
-  </suite> <!-- POM -->
+      </class> <!-- week6.classroom.CreateLeadWithReports -->
+    </test> <!-- CreateLead_Reports -->
+  </suite> <!-- Reports -->
 </testng-results>

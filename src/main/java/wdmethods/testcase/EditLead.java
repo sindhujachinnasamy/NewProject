@@ -12,7 +12,7 @@ public class EditLead {
 	// Program to execute the testcase "Edit Lead" given in the Test case.xlsx sheet ( under Sheeba\MyStuffs\TestLeaf )
 
 	public static void main(String[] args) throws InterruptedException {
-
+		System.setProperty("webdriver.chrome.driver","E:\\TestLeaf\\TL\\Software\\drivers\\chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
@@ -22,7 +22,7 @@ public class EditLead {
 		driver.findElementByClassName("decorativeSubmit").click();
 
 		driver.findElementByLinkText("CRM/SFA").click();
-		driver.findElementByLinkText("Create Lead").click();
+		driver.findElementByLinkText("Leads").click();
 
 		driver.findElementByLinkText("Find Leads").click();
 
@@ -55,7 +55,7 @@ public class EditLead {
 			System.out.println("New Company Name is updated properly");
 		else
 			System.out.println("new Comapny Name is NOT updated in the UI");
-		driver.close();
+	//	driver.close();
 
 
 	}

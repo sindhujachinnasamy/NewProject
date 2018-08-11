@@ -6,21 +6,7 @@
   <parameter name="username" value="DemoSalesManager"/>
   <test thread-count="5" name="CreateLead_Reports">
     <classes>
-      <class name="week6.classroom.EditLeadWithReports"/>
+      <class name="week6.classroom.CreateLeadWithReports"/>
     </classes>
   </test> <!-- CreateLead_Reports -->
-  <test name="CreateLead_Reports(failed)">
-    <classes>
-      <class name="week6.classroom.EditLeadWithReports">
-        <methods>
-          <include name="browserClose"/>
-          <include name="setValues"/>
-          <include name="startReport"/>
-          <include name="openApp"/>
-          <include name="beginTest"/>
-          <include name="editLead"/>
-        </methods>
-      </class> <!-- week6.classroom.EditLeadWithReports -->
-    </classes>
-  </test> <!-- CreateLead_Reports(failed) -->
 </suite> <!-- Failed suite [Reports] -->
