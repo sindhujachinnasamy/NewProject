@@ -71,7 +71,7 @@
 				<version>2.22.0</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>C:\TestLeaf\eclipse-workspace\Selenium\src\main\java\wdmethods\testcase\CreateLead.java</suiteXmlFile>
+						<suiteXmlFile>CreateLead_POM.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
